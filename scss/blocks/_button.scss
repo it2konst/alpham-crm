@@ -1,0 +1,75 @@
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+    cursor: pointer;
+}
+
+.pagecrm-button {
+    margin-top: -6px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: $fz-14-24;
+    text-transform: uppercase;
+
+    border-radius: 20px;
+    padding: 0.6lh 2.5lh;
+
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 10px 0 #d795ff;
+    background: linear-gradient(#1e0044, #1e0044) padding-box,
+        linear-gradient(to right, #383fec, #23ffff) border-box;
+    border: 2px solid rgba(177, 149, 255, 0.5);
+
+    transition: box-shadow 0.2s ease-in-out;
+
+    @include breakpoint(sm) {
+        margin-top: 0px;
+        padding: 0.7lh 1.5lh;
+    }
+
+    &:hover {
+        box-shadow: 0 0 20px 0 #8bffff;
+    }
+}
+
+.pagecrm-button__arrow {
+    // display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: $fz-11-20;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #e9deff;
+
+    border: 1px solid #8fddff;
+    border-radius: 10px;
+    padding: 0.6lh 1.2lh;
+    // width: 212px;
+    // height: 53px;
+
+    box-shadow: 0 0 3px 0 rgba(162, 45, 247, 0.1),
+        0 0 7px 0 rgba(162, 45, 247, 0.1), 0 0 13px 0 rgba(162, 45, 247, 0.1),
+        0 0 25px 0 rgba(162, 45, 247, 0.1), 0 0 47px 0 rgba(162, 45, 247, 0.1),
+        0 0 19px 9px rgba(162, 45, 247, 0.1);
+    background: #1e0044;
+
+    // min-width: 992px
+    @include breakpoint(lg) {
+        display: flex;
+    }
+}
+
+.pagecrm-button__arrow::after {
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: url("../images/svg/btn-arrow.svg") no-repeat right;
+    background-size: cover;
+}

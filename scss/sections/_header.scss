@@ -1,0 +1,127 @@
+.header {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header__wrapper {
+    padding: 1rem;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.alpham-logo {
+    display: block;
+    width: calc(102px + (222 - 102) * ((100vw - 360px) / (1600 - 360)));
+    cursor: pointer;
+}
+
+.header__menu-bottom {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+        cursor: pointer;
+    }
+}
+
+.header__nav-str {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0.5rem;
+
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #e9deff;
+
+    a:not(:last-child) {
+        margin-right: 26px;
+
+        &::after {
+            content: "\276F";
+            position: absolute;
+            transform: translateX(10px);
+        }
+    }
+
+    a:last-child {
+        text-shadow: 0 0 4px #d795ff;
+    }
+
+    margin-bottom: 40px;
+}
+
+.menu-nav {
+    display: none;
+    // margin-left: 160px;
+    margin-left: $ml-1-160;
+}
+
+.menu-nav__list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 52px;
+}
+
+.menu-nav__link {
+    font-size: $fz-11-20;
+    text-transform: uppercase;
+    text-align: center;
+    color: #e9deff;
+}
+
+.phone-box {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    // gap: 11px;
+
+    font-family: var(--font3);
+    font-weight: 500;
+    font-size: $fz-11-20;
+    color: var(--r1-white);
+}
+
+.phone-box__img {
+    display: none;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.phone-box__number {
+    display: block;
+    cursor: pointer;
+    margin-right: 32px;
+}
+
+.phone-box__btn {
+    display: none;
+}
+
+// min-width: 768px
+@include breakpoint(md) {
+    .header__menu-bottom {
+        display: none;
+    }
+
+    .menu-nav {
+        display: block;
+    }
+
+    .phone-box__btn {
+        display: block;
+    }
+}
+
+// min-width: 576px
+@include breakpoint(sm) {
+    .phone-box__img {
+        display: block;
+    }
+}

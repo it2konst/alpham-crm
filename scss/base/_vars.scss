@@ -1,0 +1,18 @@
+:root {
+    --r1-white: #fff;
+
+    --font-family: "Play", sans-serif;
+    --second-family: "Space Grotesk", sans-serif;
+    --third-family: "Karla", sans-serif;
+    --font3: "Inter", sans-serif;
+}
+
+// Colors
+$accent: #d4c17f;
+$white: #fff;
+
+$fz-40-64: calc(40px + (64 - 40) * ((100vw - 360px) / (1600 - 360)));
+$fz-14-24: calc(14px + (24 - 14) * ((100vw - 360px) / (1600 - 360)));
+$fz-11-20: calc(11px + (20 - 11) * ((100vw - 360px) / (1600 - 360)));
+
+$ml-1-160: calc(1px + (160 - 1) * ((100vw - 360px) / (1600 - 360)));

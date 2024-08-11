@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/Play-Regular.woff2") format("woff2"),
+        url("../font/Play-Regular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../font/Play-Bold.woff2") format("woff2"),
+        url("../font/Play-Bold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/SpaceGrotesk-Regular.woff2") format("woff2"),
+        url("../font/SpaceGrotesk-Regular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../font/SpaceGrotesk-Medium.woff2") format("woff2"),
+        url("../font/SpaceGrotesk-Medium.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../font/SpaceGrotesk-Bold.woff2") format("woff2"),
+        url("../font/SpaceGrotesk-Bold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Karla";
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/Karla-Regular.woff2") format("woff2"),
+        url("../font/Karla-Regular.woff2") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../font/Inter-Medium.woff2") format("woff2"),
+        url("../font/Inter-Medium.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../font/Inter-Bold.woff2") format("woff2"),
+        url("../font/Inter-Bold.woff") format("woff");
+    font-display: swap;
+}

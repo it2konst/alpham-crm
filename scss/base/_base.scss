@@ -1,0 +1,77 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-image: url("../images/background-mobile.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-position: center;
+
+    background-color: #000000;
+
+    @include breakpoint(lg) {
+        background-image: url("../images/background-desktop.webp");
+    }
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--r1-white);
+
+    // background: linear-gradient(135deg, #3b0074, #2d0059, #0e002e) no-repeat,
+    //     radial-gradient(circle at top left, #734bc7, transparent 70%) no-repeat,
+    //     radial-gradient(circle at bottom right, #0d1544, transparent 60%)
+    //         no-repeat;
+    // background-blend-mode: screen;
+    // min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1420px;
+}
+
+a {
+    color: $white;
+    opacity: 0.9;
+    transition: opacity 0.2s ease-in, text-shadow 0.2s ease-in;
+
+    &:hover {
+        // color: $accent;
+        opacity: 1;
+        text-shadow: 0 0 4px #d795ff;
+    }
+}
+
+.visually-hidden {
+    /* Contain text within 1px box */
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+
+    /* Keep the layout */
+    position: absolute;
+
+    /* Remove any visible trace (e.g. background color) */
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%); /* browsers in the future */
+
+    /* Prevent the screen reader to skip spaces between words */
+    white-space: nowrap;
+}
+
+.none {
+    display: none !important;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+    // overflow: hidden;
+}

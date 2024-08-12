@@ -1,0 +1,56 @@
+.pagecrm__business-pro .pagecrm__title {
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+        margin-bottom: 46px;
+    }
+}
+
+.pagecrm__features {
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    justify-content: center;
+    row-gap: 15px;
+    margin-bottom: 75px;
+
+    @include breakpoint(md) {
+        grid-template-columns: repeat(4, 1fr);
+
+        #card1 {
+            order: 2;
+        }
+        #card2 {
+            order: 3;
+        }
+        #card3 {
+            order: 1;
+        }
+        #card4 {
+            order: 4;
+        }
+
+        margin-bottom: 120px;
+    }
+}
+
+.pagecrm__feature-icon {
+    display: block;
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 5px;
+
+    @include breakpoint(md) {
+        max-width: 200px;
+        margin: 0 auto 20px;
+    }
+}
+
+.pagecrm__feature-text {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: center;
+    color: #f9fbff;
+}

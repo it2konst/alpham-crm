@@ -1,0 +1,14 @@
+.pagecrm__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: $fz-24-45;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    font-variant: small-caps;
+    text-align: center;
+    color: var(--r1-white);
+
+    @include breakpoint(md) {
+        line-height: 1.98;
+    }
+}

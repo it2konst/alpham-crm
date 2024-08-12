@@ -264,7 +264,7 @@ a:hover {
   display: flex;
   align-items: center;
   list-style-type: none;
-  gap: 52px;
+  gap: calc(16px + 36 * (100vw - 360px) / 1240);
 }
 
 .menu-nav__link {
@@ -293,7 +293,11 @@ a:hover {
 .phone-box__number {
   display: block;
   cursor: pointer;
-  margin-right: 32px;
+}
+@media screen and (min-width: 992px) {
+  .phone-box__number {
+    margin-right: 32px;
+  }
 }
 
 .phone-box__btn {
@@ -359,6 +363,64 @@ a:hover {
   .pagecrm-hero__img {
     margin-bottom: 50px;
   }
+}
+
+.pagecrm__business-pro .pagecrm__title {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .pagecrm__business-pro .pagecrm__title {
+    margin-bottom: 46px;
+  }
+}
+
+.pagecrm__features {
+  display: grid;
+  grid-template-columns: repeat(2, 170px);
+  justify-content: center;
+  row-gap: 15px;
+  margin-bottom: 75px;
+}
+@media screen and (min-width: 768px) {
+  .pagecrm__features {
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 120px;
+  }
+  .pagecrm__features #card1 {
+    order: 2;
+  }
+  .pagecrm__features #card2 {
+    order: 3;
+  }
+  .pagecrm__features #card3 {
+    order: 1;
+  }
+  .pagecrm__features #card4 {
+    order: 4;
+  }
+}
+
+.pagecrm__feature-icon {
+  display: block;
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 5px;
+}
+@media screen and (min-width: 768px) {
+  .pagecrm__feature-icon {
+    max-width: 200px;
+    margin: 0 auto 20px;
+  }
+}
+
+.pagecrm__feature-text {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: center;
+  color: #f9fbff;
 }
 
 .search {
@@ -585,4 +647,20 @@ button:not(:disabled),
   height: 10px;
   background: url("../images/svg/btn-arrow.svg") no-repeat right;
   background-size: cover;
+}
+
+.pagecrm__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: calc(24px + 21 * (100vw - 360px) / 1240);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  font-variant: small-caps;
+  text-align: center;
+  color: var(--r1-white);
+}
+@media screen and (min-width: 768px) {
+  .pagecrm__title {
+    line-height: 1.98;
+  }
 }/*# sourceMappingURL=main.css.map */

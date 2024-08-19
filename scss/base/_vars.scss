@@ -5,16 +5,24 @@
     --second-family: "Space Grotesk", sans-serif;
     --third-family: "Karla", sans-serif;
     --font3: "Inter", sans-serif;
+
+    --black: #333;
+    --white: #fff;
+    --border: #ebebeb;
+    --grey: #999;
 }
 
 // Colors
 $accent: #d4c17f;
 $white: #fff;
 
-$fz-40-64: calc(40px + (64 - 40) * ((100vw - 360px) / (1600 - 360)));
-$fz-14-24: calc(14px + (24 - 14) * ((100vw - 360px) / (1600 - 360)));
 $fz-11-20: calc(11px + (20 - 11) * ((100vw - 360px) / (1600 - 360)));
+$fz-14-20: calc(14px + (20 - 14) * ((100vw - 360px) / (1600 - 360)));
+$fz-14-24: calc(14px + (24 - 14) * ((100vw - 360px) / (1600 - 360)));
+$fz-16-24: calc(16px + (24 - 16) * ((100vw - 360px) / (1600 - 360)));
+$fz-24-42: calc(24px + (42 - 24) * ((100vw - 360px) / (1600 - 360)));
 $fz-24-45: calc(24px + (45 - 24) * ((100vw - 360px) / (1600 - 360)));
+$fz-40-64: calc(40px + (64 - 40) * ((100vw - 360px) / (1600 - 360)));
 
 $ml-1-160: calc(1px + (160 - 1) * ((100vw - 360px) / (1600 - 360)));
 $gap-16-52: calc(16px + (52 - 16) * ((100vw - 360px) / (1600 - 360)));

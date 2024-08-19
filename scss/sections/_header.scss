@@ -99,7 +99,8 @@
     cursor: pointer;
 
     @include breakpoint(lg) {
-        margin-right: 32px;
+        letter-spacing: -1px;
+        margin-right: 25px;
     }
 }
 

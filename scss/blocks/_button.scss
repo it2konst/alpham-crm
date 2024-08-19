@@ -33,6 +33,27 @@ button:not(:disabled),
     }
 }
 
+.pagecrm-button--main {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #e9deff;
+
+    border: 1px solid #8fddff;
+    border-radius: 10px;
+    padding: 7px 7px 7px 0px;
+    // width: 307px;
+    height: 59px;
+
+    box-shadow: 0 0 3px 0 rgba(162, 45, 247, 0.1),
+        0 0 7px 0 rgba(162, 45, 247, 0.1), 0 0 13px 0 rgba(162, 45, 247, 0.1),
+        0 0 25px 0 rgba(162, 45, 247, 0.1), 0 0 47px 0 rgba(162, 45, 247, 0.1),
+        0 0 19px 9px rgba(162, 45, 247, 0.1);
+    background: #1e0044;
+}
+
 .pagecrm-button__arrow {
     // display: flex;
     display: none;

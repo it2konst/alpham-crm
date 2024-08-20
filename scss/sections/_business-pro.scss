@@ -70,41 +70,57 @@
 //------------------------------------------------------------
 .pagecrm__systems {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    // flex-direction: column;
     align-items: center;
     gap: 20px;
 
     margin-bottom: 75px;
 
-    @include breakpoint(md) {
-        flex-direction: row;
+    @include breakpoint(lg) {
+        // flex-direction: row;
         margin-bottom: 120px;
     }
 }
 
 .pagecrm__system {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(140px, 345px) minmax(140px, 345px)
+    );
+
     border-radius: 10px;
     box-shadow: 0 0 20px 0 #d795ff, 0 0 4px 0 #d795ff;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         border-radius: 20px;
+        max-height: 320px;
     }
 }
 
 .pagecrm__system-images {
+    display: grid;
+    place-items: center;
+    padding: 20px 0px;
+    border-radius: 10px 0px 0px 10px;
+    background: linear-gradient(229deg, #fff 0%, #0e9ddd 71.45%);
+    max-height: 320px;
+
     img {
         display: block;
-        border-radius: 10px 0px 0px 10px;
         width: 100%;
         height: auto;
         // aspect-ratio: calc(170 / 190);
+        // mix-blend-mode: multiply;
+    }
 
-        @include breakpoint(md) {
-            border-radius: 20px 0px 0px 20px;
-            // aspect-ratio: 1.08;
-        }
+    @include breakpoint(lg) {
+        border-radius: 20px 0px 0px 20px;
+        // aspect-ratio: 1.07;
     }
 }
 
@@ -114,7 +130,7 @@
     padding: 10px 10px;
     min-height: 190px;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         padding: 28px 20px;
     }
 }
@@ -131,7 +147,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         margin-bottom: 27px;
     }
 }
@@ -141,7 +157,7 @@
     grid-template-columns: 1fr;
     gap: 10px;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         gap: 25px;
     }
 }
@@ -150,7 +166,7 @@
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center; // Вертикаль
-    gap: 10px; // Промежуток между изображением и текстом
+    gap: 10px;
     justify-items: start; // Горизонталь
 
     img {
@@ -164,10 +180,10 @@
     line-height: 1;
     color: var(--r1-white);
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
+        font-size: 20px;
         line-height: 1.3;
         gap: 8px;
-        line-height: 1.3;
         img {
             width: 28px;
             aspect-ratio: 1;

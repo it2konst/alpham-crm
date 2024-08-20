@@ -441,38 +441,46 @@ a:hover {
 
 .pagecrm__systems {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   margin-bottom: 75px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .pagecrm__systems {
-    flex-direction: row;
     margin-bottom: 120px;
   }
 }
 
 .pagecrm__system {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 345px) minmax(140px, 345px));
   border-radius: 10px;
   box-shadow: 0 0 20px 0 #d795ff, 0 0 4px 0 #d795ff;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .pagecrm__system {
     border-radius: 20px;
+    max-height: 320px;
   }
 }
 
+.pagecrm__system-images {
+  display: grid;
+  place-items: center;
+  padding: 20px 0px;
+  border-radius: 10px 0px 0px 10px;
+  background: linear-gradient(229deg, #fff 0%, #0e9ddd 71.45%);
+  max-height: 320px;
+}
 .pagecrm__system-images img {
   display: block;
-  border-radius: 10px 0px 0px 10px;
   width: 100%;
   height: auto;
 }
-@media screen and (min-width: 768px) {
-  .pagecrm__system-images img {
+@media screen and (min-width: 992px) {
+  .pagecrm__system-images {
     border-radius: 20px 0px 0px 20px;
   }
 }
@@ -483,7 +491,7 @@ a:hover {
   padding: 10px 10px;
   min-height: 190px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .pagecrm__system-info {
     padding: 28px 20px;
   }
@@ -500,7 +508,7 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .pagecrm__system-name {
     margin-bottom: 27px;
   }
@@ -511,7 +519,7 @@ a:hover {
   grid-template-columns: 1fr;
   gap: 10px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .pagecrm__system-list {
     gap: 25px;
   }
@@ -533,11 +541,11 @@ a:hover {
   width: 20px;
   aspect-ratio: 1;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .pagecrm__system-item {
+    font-size: 20px;
     line-height: 1.3;
     gap: 8px;
-    line-height: 1.3;
   }
   .pagecrm__system-item img {
     width: 28px;

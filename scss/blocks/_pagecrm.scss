@@ -12,3 +12,19 @@
         line-height: 1.98;
     }
 }
+
+.h2 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: $fz-20-45;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--r1-white);
+
+    @include breakpoint(md) {
+        line-height: 1.98;
+        font-variant: small-caps;
+    }
+}

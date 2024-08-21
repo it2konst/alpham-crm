@@ -1,3 +1,14 @@
+.pagecrm__business-pro {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    padding-bottom: 75px;
+    @include breakpoint(md) {
+        padding-bottom: 120px;
+    }
+}
+
 .pagecrm__business-pro .pagecrm__title {
     margin: 0 auto;
     max-width: 67%;
@@ -14,7 +25,7 @@
 
 .pagecrm__features {
     display: grid;
-    grid-template-columns: repeat(2, 170px);
+    grid-template-columns: repeat(2, 0.5fr); //170px
     justify-content: center;
     row-gap: 15px;
     margin-bottom: 75px;
@@ -55,15 +66,14 @@
 .pagecrm__feature-text {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 14px;
+    font-size: $fz-14-30;
     line-height: 1.43;
     text-align: center;
     color: #f9fbff;
 
     @include breakpoint(md) {
-        font-size: 32px;
+        // font-size: 32px;
         line-height: 1.25;
-        color: var(--r1-white);
     }
 }
 
@@ -98,7 +108,7 @@
 
     @include breakpoint(lg) {
         border-radius: 20px;
-        max-height: 320px;
+        // max-height: 320px;
     }
 }
 
@@ -207,8 +217,6 @@
             )
             border-box;
     border: 2px solid transparent;
-
-    margin-bottom: 400px;
 
     @include breakpoint(md) {
         max-width: 652px;
@@ -528,4 +536,21 @@
 .dropdown__arrow:before {
     content: url("./../images/svg/arrow-down.svg");
 }
+
+.business-pro__img {
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -39%);
+        z-index: -1;
+
+        width: 100%;
+        height: auto;
+    }
+}
+
 //---dropdown END---------------------

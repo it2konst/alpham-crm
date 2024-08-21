@@ -1,0 +1,99 @@
+.pagecrm__advantages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.advantages__title {
+    margin-top: 20px;
+
+    @include breakpoint(md) {
+        margin-bottom: 46px;
+    }
+}
+
+.advantages__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .menu {
+        padding: 14px 26px 14px 26px;
+
+        border-radius: 20px 0 0 20px;
+        backdrop-filter: blur(20px);
+        background: linear-gradient(
+            90deg,
+            rgba(177, 149, 255, 0.7) 0%,
+            rgba(177, 149, 255, 0.7) 0.01%,
+            rgba(44, 48, 83, 0.7) 100%
+        );
+
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+
+    .menu-desk {
+        display: none;
+
+        @include breakpoint(md) {
+            display: block;
+            padding: 50px 0px 50px 50px;
+            border-radius: 40px 0 0 40px;
+            backdrop-filter: blur(20px);
+            background: linear-gradient(
+                90deg,
+                rgba(177, 149, 255, 0.7) 0%,
+                rgba(177, 149, 255, 0.7) 0.01%,
+                rgba(44, 48, 83, 0.7) 100%
+            );
+        }
+    }
+
+    .menu__item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        place-items: center start;
+        gap: 18px;
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: $fz-14-36;
+        line-height: 1.43;
+        color: var(--r1-white);
+
+        &:not(:last-child) {
+            gap: 2px;
+            margin-bottom: 15px;
+            @include breakpoint(md) {
+                margin-bottom: 40px;
+            }
+        }
+
+        @include breakpoint(md) {
+            line-height: 1.11;
+        }
+
+        img {
+            width: 40px;
+            height: auto;
+
+            @include breakpoint(md) {
+                width: 110px;
+                height: auto;
+            }
+        }
+    }
+}
+
+.advantages__menu-img {
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+        max-width: 100%;
+    }
+}

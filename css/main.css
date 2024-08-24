@@ -11,6 +11,7 @@ html {
 
 body {
   margin: 0;
+  padding-bottom: 400px;
 }
 
 p {
@@ -372,9 +373,9 @@ a:hover {
 }
 
 .pagecrm__business-pro {
-  display: block;
   position: relative;
-  overflow: hidden;
+  display: block;
+  overflow-y: hidden;
   padding-bottom: 75px;
 }
 @media screen and (min-width: 768px) {
@@ -815,7 +816,7 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -39%);
+    transform: translate(-50%, -33%);
     z-index: -1;
     width: 100%;
     height: auto;
@@ -830,11 +831,13 @@ a:hover {
 }
 
 .advantages__title {
-  margin-top: 20px;
+  margin-top: 0px;
+  margin-bottom: 45px;
 }
 @media screen and (min-width: 768px) {
   .advantages__title {
-    margin-bottom: 46px;
+    margin-top: 20px;
+    margin-bottom: 90px;
   }
 }
 
@@ -842,16 +845,23 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: 100%;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--r1-white);
 }
-.advantages__menu .menu {
-  padding: 14px 26px 14px 26px;
+.advantages__menu .menu-mob {
+  padding: 22px 26px 28px 26px;
   border-radius: 20px 0 0 20px;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   background: linear-gradient(90deg, rgba(177, 149, 255, 0.7) 0%, rgba(177, 149, 255, 0.7) 0.01%, rgba(44, 48, 83, 0.7) 100%);
 }
 @media screen and (min-width: 768px) {
-  .advantages__menu .menu {
+  .advantages__menu .menu-mob {
     display: none;
   }
 }
@@ -860,19 +870,20 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .advantages__menu .menu-desk {
+    width: 100%;
     display: block;
-    padding: 50px 0px 50px 50px;
+    padding: 40px 0px 50px 50px;
     border-radius: 40px 0 0 40px;
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
-    background: linear-gradient(90deg, rgba(177, 149, 255, 0.7) 0%, rgba(177, 149, 255, 0.7) 0.01%, rgba(44, 48, 83, 0.7) 100%);
+    background: linear-gradient(90deg, rgba(177, 149, 255, 0.7) 0%, rgba(177, 149, 255, 0.7) 0.01%, rgba(44, 48, 83, 0.7) 50%, rgba(44, 48, 83, 0) 100%);
   }
 }
 .advantages__menu .menu__item {
   display: grid;
   grid-template-columns: auto 1fr;
   place-items: center start;
-  gap: 18px;
+  gap: 6px;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: calc(14px + 22 * (100vw - 360px) / 1240);
@@ -880,21 +891,20 @@ a:hover {
   color: var(--r1-white);
 }
 .advantages__menu .menu__item:not(:last-child) {
-  gap: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 26px;
 }
 @media screen and (min-width: 768px) {
   .advantages__menu .menu__item:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 22px;
   }
 }
 @media screen and (min-width: 768px) {
   .advantages__menu .menu__item {
-    line-height: 1.11;
+    line-height: 1.9;
   }
 }
 .advantages__menu .menu__item img {
-  width: 40px;
+  width: 44px;
   height: auto;
 }
 @media screen and (min-width: 768px) {
@@ -904,14 +914,129 @@ a:hover {
   }
 }
 
-.advantages__menu-img {
+.advantages__menu::before {
+  content: "";
   display: none;
 }
-@media screen and (min-width: 768px) {
-  .advantages__menu-img {
+@media screen and (min-width: 1222px) {
+  .advantages__menu::before {
     display: block;
-    max-width: 100%;
+    width: 491px;
+    height: 614px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-8%, -50%);
+    z-index: 2;
+    background-image: url("./../images/pagecrm/advantages/mobile-phine.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+}
+
+.pagecrm__business {
+  padding-top: 75px;
+}
+.pagecrm__business .pagecrm__h2 {
+  margin-bottom: 5px;
+}
+.pagecrm__business .pagecrm__desc {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-align: center;
+  background: linear-gradient(218deg, #fff 0%, #d795ff 52.4%, #7bc2fe 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  mix-blend-mode: screen;
+  margin-bottom: 45px;
+}
+@media screen and (min-width: 768px) {
+  .pagecrm__business {
+    padding-top: 120px;
+  }
+}
+
+.pagecrm__business .business-card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.pagecrm__business .business-card__wrapper .business-card {
+  display: flex;
+  flex-direction: column;
+  padding: 33px 33px 26px 33px;
+  max-width: 684px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 0 rgba(215, 149, 255, 0.5);
+  background: rgba(66, 25, 99, 0.7);
+}
+@media screen and (min-width: 1200px) {
+  .pagecrm__business .business-card__wrapper .business-card {
+    flex-direction: row;
+    gap: 13px;
+  }
+}
+.pagecrm__business .business-card__wrapper .business-card .business-card__img {
+  width: 273px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.pagecrm__business .business-card__wrapper .business-card .business-card__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.pagecrm__business .business-card__wrapper .business-card .business-card__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pagecrm__business .business-card__wrapper .business-card .business-card__inner .business-card__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 110%;
+  color: var(--r1-white);
+  text-align: left;
+}
+.pagecrm__business .business-card__wrapper .business-card .business-card__inner .business-card__item {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  color: var(--r1-white);
+  text-align: left;
+}
+.pagecrm__business .business-card__wrapper .business-card .business-card__inner p + p {
+  font-weight: 700;
+  background: linear-gradient(157deg, #b195ff 0%, #d795ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pagecrm__business .business-card__wrapper .business-card .business-card__inner .business-card__btn {
+  margin-top: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.46;
+  text-align: center;
+  color: var(--r1-white);
+  border-radius: 10px;
+  padding: 0.4lh 1.4lh;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: linear-gradient(#1e0044, #1e0044) padding-box, linear-gradient(45deg, #383fec, #23ffff) border-box;
 }
 
 .search {
@@ -1171,7 +1296,9 @@ button:not(:disabled),
   }
 }
 
-.h2 {
+.h2,
+.pagecrm__h2,
+.pagecrm__subtitle {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: calc(20px + 25 * (100vw - 360px) / 1240);
@@ -1182,7 +1309,9 @@ button:not(:disabled),
   color: var(--r1-white);
 }
 @media screen and (min-width: 768px) {
-  .h2 {
+  .h2,
+  .pagecrm__h2,
+  .pagecrm__subtitle {
     line-height: 1.98;
     font-variant: small-caps;
   }

@@ -1,7 +1,7 @@
 .pagecrm__business-pro {
-    display: block;
     position: relative;
-    overflow: hidden;
+    display: block;
+    overflow-y: hidden;
 
     padding-bottom: 75px;
     @include breakpoint(md) {
@@ -545,7 +545,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -39%);
+        transform: translate(-50%, -33%);
         z-index: -1;
 
         width: 100%;

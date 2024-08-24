@@ -7,10 +7,12 @@
 }
 
 .advantages__title {
-    margin-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 45px;
 
     @include breakpoint(md) {
-        margin-bottom: 46px;
+        margin-top: 20px;
+        margin-bottom: 90px;
     }
 }
 
@@ -18,9 +20,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    width: 100%;
 
-    .menu {
-        padding: 14px 26px 14px 26px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--r1-white);
+
+    .menu-mob {
+        padding: 22px 26px 28px 26px;
 
         border-radius: 20px 0 0 20px;
         backdrop-filter: blur(20px);
@@ -40,15 +50,23 @@
         display: none;
 
         @include breakpoint(md) {
+            width: 100%;
             display: block;
-            padding: 50px 0px 50px 50px;
+            padding: 40px 0px 50px 50px;
             border-radius: 40px 0 0 40px;
             backdrop-filter: blur(20px);
+            // background: linear-gradient(
+            //     90deg,
+            //     rgba(177, 149, 255, 0.7) 0%,
+            //     rgba(177, 149, 255, 0.7) 0.01%,
+            //     rgba(44, 48, 83, 0.7) 100%
+            // );
             background: linear-gradient(
                 90deg,
                 rgba(177, 149, 255, 0.7) 0%,
                 rgba(177, 149, 255, 0.7) 0.01%,
-                rgba(44, 48, 83, 0.7) 100%
+                rgba(44, 48, 83, 0.7) 50%,
+                rgba(44, 48, 83, 0) 100%
             );
         }
     }
@@ -57,7 +75,8 @@
         display: grid;
         grid-template-columns: auto 1fr;
         place-items: center start;
-        gap: 18px;
+        // gap: 18px;
+        gap: 6px;
 
         font-family: var(--font-family);
         font-weight: 400;
@@ -66,19 +85,18 @@
         color: var(--r1-white);
 
         &:not(:last-child) {
-            gap: 2px;
-            margin-bottom: 15px;
+            margin-bottom: 26px;
             @include breakpoint(md) {
-                margin-bottom: 40px;
+                margin-bottom: 22px;
             }
         }
 
         @include breakpoint(md) {
-            line-height: 1.11;
+            line-height: 1.9;
         }
 
         img {
-            width: 40px;
+            width: 44px;
             height: auto;
 
             @include breakpoint(md) {
@@ -89,11 +107,23 @@
     }
 }
 
-.advantages__menu-img {
+.advantages__menu::before {
+    content: "";
     display: none;
 
-    @include breakpoint(md) {
+    @media screen and (min-width: 1222px) {
         display: block;
-        max-width: 100%;
+        width: 491px;
+        height: 614px;
+
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-8%, -50%);
+        z-index: 2;
+
+        background-image: url("./../images/pagecrm/advantages/mobile-phine.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }

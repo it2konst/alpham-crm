@@ -1,0 +1,136 @@
+.pagecrm__business {
+    padding-top: 75px;
+
+    .pagecrm__h2 {
+        margin-bottom: 5px;
+    }
+
+    .pagecrm__desc {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        text-align: center;
+        background: linear-gradient(
+            218deg,
+            #fff 0%,
+            #d795ff 52.4%,
+            #7bc2fe 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        mix-blend-mode: screen;
+
+        margin-bottom: 45px;
+    }
+
+    @include breakpoint(md) {
+        padding-top: 120px;
+    }
+}
+
+.pagecrm__business .business-card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .business-card {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 1200px) {
+            flex-direction: row;
+            gap: 13px;
+        }
+
+        padding: 33px 33px 26px 33px;
+        max-width: 684px;
+
+        border-radius: 30px;
+        // width: 340px;
+        // height: 383px;
+
+        box-shadow: 0 0 10px 0 rgba(215, 149, 255, 0.5);
+        background: rgba(66, 25, 99, 0.7);
+
+        .business-card__img {
+            width: 273px;
+            // height: 185px;
+            border-radius: 30px;
+            overflow: hidden;
+
+            // background: linear-gradient(45deg, #1f0b32 0%, #1d1b7a 100%);
+            margin-bottom: 12px;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .business-card__inner {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .business-card__title {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 110%;
+                color: var(--r1-white);
+                text-align: left;
+            }
+
+            .business-card__item {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 110%;
+                color: var(--r1-white);
+                text-align: left;
+            }
+
+            p + p {
+                font-weight: 700;
+                background: linear-gradient(157deg, #b195ff 0%, #d795ff 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .business-card__btn {
+                margin-top: 13px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 1.46;
+                text-align: center;
+                color: var(--r1-white);
+
+                border-radius: 10px;
+                padding: 0.4lh 1.4lh;
+                // width: 155px;
+                // height: 46px;
+                // background: rgba(29, 1, 65, 0.3);
+                cursor: pointer;
+
+                border: 1px solid transparent;
+                background: linear-gradient(#1e0044, #1e0044) padding-box,
+                    linear-gradient(45deg, #383fec, #23ffff) border-box;
+                // linear-gradient(to right, #383fec, #23ffff) border-box;
+            }
+        }
+    }
+}

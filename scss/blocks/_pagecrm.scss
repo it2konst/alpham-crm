@@ -13,7 +13,9 @@
     }
 }
 
-.h2 {
+.h2,
+.pagecrm__h2,
+.pagecrm__subtitle {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: $fz-20-45;
